@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    .entirePosition {
+        position: relative;
+        height: 625px;
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    .header {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div>
+        <div class="entirePosition">
+            <header class="header">
+                <h1>{{.Title}}</h1>
+            </header>
+            {{range .Story}}
+            <section>
+                <p>{{.}}</p>
+            </section>
+            {{end}}
+            {{range .Options}}
+            <nav>
+                <a href={{.Arc}}>{{.Text}} </a><br />
+            </nav>
+            {{end}}
+        </div>
+    </div>
+
+</body>
+
+</html>
